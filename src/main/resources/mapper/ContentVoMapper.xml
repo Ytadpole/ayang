@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangs.dao.ContentVoDao">
+    <select id="selectContent" resultType="com.yangs.modal.vo.ContentVo">
+        select * from t_contents
+    </select>
+</mapper>
