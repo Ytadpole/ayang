@@ -1,6 +1,6 @@
-package com.yangs.modal.vo;
+package com.yangs.model;
 
-public class ContentVo {
+public class ContentsVo {
     private Integer cid;
 
     private String title;

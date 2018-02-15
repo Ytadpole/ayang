@@ -34,7 +34,9 @@ public class BaseInterceptor implements HandlerInterceptor{
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+        log.info("prepare start...");
         httpServletRequest.setAttribute("commons", commons);
+        log.info("prepare end...");
     }
 
     @Override

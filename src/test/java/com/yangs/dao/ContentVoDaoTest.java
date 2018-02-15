@@ -1,6 +1,5 @@
 package com.yangs.dao;
 
-import com.yangs.modal.vo.ContentVo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

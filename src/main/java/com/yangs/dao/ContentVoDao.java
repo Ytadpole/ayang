@@ -1,7 +1,5 @@
 package com.yangs.dao;
 
-import com.yangs.modal.vo.ContentVo;
-
 import java.util.List;
 
 /**

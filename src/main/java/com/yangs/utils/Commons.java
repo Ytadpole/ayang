@@ -41,5 +41,11 @@ public final class Commons {
         }
     }
 
-    public static String site_url(String url)
+    public static String site_url(){
+        return site_url("");
+    }
+
+    public static String site_url(String url){
+        return site_option("site_url") + url;
+    }
 }
