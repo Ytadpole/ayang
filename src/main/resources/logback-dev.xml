@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    configuration
+        scan： ture- 配置修改可以重新加载 false反之 默认true
+        scanPeriod： 检测皮修改的周期 scan为true生效 默认1分钟
+        debug： true-展示logback自身内部日志 false反之 默认false
+-->
+<configuration  scan="true" scanPeriod="60 seconds" debug="false">
+    <!--定义上下文名字-->
+    <contextName>logback</contextName>
+    <!--定义变量 定义之后可以通过${具体key}来读取value-->
+    <property name="log.path" value="./log/logback.log" />
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--日志过滤器 过滤不想看到的日志-->
+        <!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+             <level>ERROR</level>
+         </filter>-->
+        <!--日志编码-->
+        <encoder>
+            <!--
+            %d{HH:mm:ss.SSS}时间
+            %contextName上下文名字（前面定义的）
+            [%thread] 当前线程名
+            %-5level 日志基本 格式：占5位 内容靠左
+            %logger{36} 日志输出者名字
+            %msg 日志内容
+            %n 换行
+            -->
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--文件路径 使用到前面定义的变量-->
+        <file>${log.path}</file>
+        <!--按天分割日志-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <!--日志格式同 console-->
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--基础日志输出 必须有-->
+    <root level="debug">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+    <!--
+    logger控制 某些包 或 者某些类 里面的日志打印
+    name： 指定包或者类
+    level：日志级别， 如果没有，使用父类的级别
+    addtivity:是否向上级loger传递打印信息。默认是true。
+    -->
+    <logger name="com.yangs"/>
+    <!--logback.LogbackDemo：类的全路径 -->
+    <!--<logger name="com.dudu.controller.LearnController" level="WARN" additivity="true">-->
+    <!--<appender-ref ref="console"/>-->
+    <!--</logger>-->
+
+    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+    <!--<springProfile name="test,dev">
+        <logger name="com.dudu.controller" level="info" />
+    </springProfile>
+    &lt;!&ndash; 生产环境. &ndash;&gt;
+    <springProfile name="prod">
+        <logger name="com.dudu.controller" level="ERROR" />
+    </springProfile>-->
+
+</configuration>

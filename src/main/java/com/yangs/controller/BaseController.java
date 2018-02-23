@@ -8,7 +8,7 @@ public abstract class BaseController {
 
     /**
      * 后期可以分主题用
-     * @param viewName
+     * @param viewName html名 不带后缀
      * @return
      */
     public String renderer(String viewName){

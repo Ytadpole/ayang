@@ -5,7 +5,7 @@
     <div class="footer-social">
         <div class="footer-container clearfix">
             <div class="social-list">
-                <!--<th:block th:each="index:${commons.social()}">
+                <th:block th:each="index:${commons.social()}">
                     <th:block th:if="${index.value}!=null and ${index.value}!=''">
                         <th:block th:switch="${index.key}">
                             <th:block th:case="'weibo'">
@@ -26,7 +26,7 @@
                             </th:block>
                         </th:block>
                     </th:block>
-                </th:block>-->
+                </th:block>
             </div>
         </div>
     </div>
@@ -35,9 +35,9 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <div class="info-text">
-                       <!-- <a href="http://www.54tianzhisheng.cn" target="_blank" style="display: block;margin: 0 auto;" class="info-logo">
+                        <a href="http://www.54tianzhisheng.cn" target="_blank" style="display: block;margin: 0 auto;" class="info-logo">
                             <img style="display: block;margin: 0 auto;" th:src="@{/user/img/logo.png}" th:alt="${commons.site_title()}"/>
-                        </a>-->
+                        </a>
                         <br/>
                         <p>&copy; 版权所有 <a href="https://github.com/zhisheng17/blog" target="_blank"
                                          rel="nofollow">My Blog</a> 保留一切权利
@@ -52,7 +52,7 @@
     </div>
 </footer>
 
-<!--<th:block th:if="${is_post}">
+<th:block th:if="${is_post}">
     <div id="directory-content" class="directory-content">
         <div id="directory"></div>
     </div>
@@ -203,6 +203,6 @@
     });
     InstantClick.init('mousedown');
     /*]]>*/
-</script>-->
+</script>
 </body>
 </html>

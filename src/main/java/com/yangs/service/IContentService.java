@@ -8,4 +8,6 @@ import com.yangs.modal.vo.ContentVo;
  */
 public interface IContentService {
     PageInfo<ContentVo> getContents(Integer offset, Integer limit);
+
+    ContentVo getContentByCid(String cid);
 }
