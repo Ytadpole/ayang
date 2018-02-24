@@ -41,7 +41,6 @@ public class ContentService implements IContentService{
                 //cid方式
                 ContentVo contentVo = contentVoMapper.selectByPrimaryKey(Integer.valueOf(cid));
                 //被查看后 浏览量加一
-                log.debug("文章详情：{}", contentVo.toString());
                 contentVo.setHits(contentVo.getHits() + 1);
                 contentVoMapper.updateByPrimaryKey(contentVo);
                 return contentVo;

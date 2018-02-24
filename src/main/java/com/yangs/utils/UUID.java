@@ -1,4 +1,4 @@
-package com.my.blog.website.utils;
+package com.yangs.utils;
 
 
 import java.util.Arrays;

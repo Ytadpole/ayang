@@ -186,7 +186,7 @@ public final class Commons {
      * @return
      */
     public static String article(String content){
-        return MDUtile.md2Html(content);
+        return MDUtil.md2Html(content);
     }
 
     //footer

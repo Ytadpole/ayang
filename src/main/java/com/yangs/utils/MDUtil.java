@@ -8,7 +8,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
  * Created by Ytadpole on 2018/2/23.
  * md格式文件
  */
-public class MDUtile {
+public class MDUtil {
 
     /**
      * md格式字符串 转 html格式字符串

@@ -38,4 +38,5 @@ public class IndexController extends BaseController{
         request.setAttribute("is_post", true);//展示目录列表
         return this.renderer("content");
     }
+
 }
