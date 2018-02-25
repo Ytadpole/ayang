@@ -30,13 +30,4 @@ public class OptionVo {
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
     }
-
-    @Override
-    public String toString() {
-        return "OptionVo{" +
-                "name='" + name + '\'' +
-                ", value='" + value + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

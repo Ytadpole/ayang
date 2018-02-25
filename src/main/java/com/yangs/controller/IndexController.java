@@ -26,7 +26,7 @@ public class IndexController extends BaseController{
 
 
     public String index(HttpServletRequest request, int limit){
-        PageInfo<ContentVo> articles =  contentService.getContents(0, 10);
+        PageInfo<ContentVo> articles =  contentService.getContents(null, 0, 10);
         request.setAttribute("articles", articles);
         return this.renderer("index");
     }

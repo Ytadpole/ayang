@@ -60,16 +60,4 @@ public class LogVo {
     public void setCreated(Integer created) {
         this.created = created;
     }
-
-    @Override
-    public String toString() {
-        return "LogVo{" +
-                "id=" + id +
-                ", action='" + action + '\'' +
-                ", data='" + data + '\'' +
-                ", authorId=" + authorId +
-                ", ip='" + ip + '\'' +
-                ", created=" + created +
-                '}';
-    }
 }

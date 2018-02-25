@@ -60,16 +60,4 @@ public class AttachVo {
     public void setCreated(Integer created) {
         this.created = created;
     }
-
-    @Override
-    public String toString() {
-        return "AttachVo{" +
-                "id=" + id +
-                ", fname='" + fname + '\'' +
-                ", ftype='" + ftype + '\'' +
-                ", fkey='" + fkey + '\'' +
-                ", authorId=" + authorId +
-                ", created=" + created +
-                '}';
-    }
 }

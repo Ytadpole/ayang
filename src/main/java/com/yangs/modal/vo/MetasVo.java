@@ -70,17 +70,4 @@ public class MetasVo {
     public void setParent(Integer parent) {
         this.parent = parent;
     }
-
-    @Override
-    public String toString() {
-        return "MetasVo{" +
-                "mid=" + mid +
-                ", name='" + name + '\'' +
-                ", slug='" + slug + '\'' +
-                ", type='" + type + '\'' +
-                ", description='" + description + '\'' +
-                ", sort=" + sort +
-                ", parent=" + parent +
-                '}';
-    }
 }

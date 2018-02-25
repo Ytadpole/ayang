@@ -25,11 +25,9 @@ public class ContentService implements IContentService{
     private ContentVoMapper contentVoMapper;
 
     @Override
-    public PageInfo<ContentVo> getContents(Integer offset, Integer limit) {
-        ContentVoExample example = new ContentVoExample();
+    public PageInfo<ContentVo> getContents(ContentVoExample example ,Integer page, Integer limit) {
         example.setOrderByClause("created desc");
-        PageHelper.offsetPage(offset, limit);
-
+        PageHelper.offsetPage(page, limit);
         List<ContentVo> list = contentVoMapper.selectByExampleWithBLOBs(example);
         return new PageInfo<>(list);
     }
